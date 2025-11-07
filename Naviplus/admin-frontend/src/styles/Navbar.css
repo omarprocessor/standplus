@@ -1,0 +1,116 @@
+/* =========================
+   File: src/styles/NavBar.css
+   Description: Styling for NavBar component with responsive mobile menu
+   ========================= */
+   
+ /* Main navbar container */
+.navbar {
+  margin: 0;                     /* Remove default margin */
+  padding: 0 20px;               /* Optional side padding */
+  background-color: #004080;     /* Ensure background fills full width */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Separate brand from links */
+  align-items: center;
+  background-color: #004080; /* Dark blue background */
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+  
+
+/* Brand or app title */
+.navbar-brand {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Container for links */
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+/* Individual link styling */
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #ffd700; /* Gold/yellow on hover */
+}
+/* Active link styling */
+.brand-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hamburger menu icon */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar-toggle span {
+  background: white;
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #004080;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* Wrapper for logo image to enhance visibility */
+.navbar-logo-wrapper {
+  background-color: #ffffff;      /* White background for contrast */
+  padding: 6px;                   /* Padding around the logo */
+  border-radius: 8px;             /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* Logo image next to brand name */
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+/* Align brand content in row */
+.navbar-brand {
+  display: flex;
+  align-items: center;        /* Vertically center logo and text */
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
